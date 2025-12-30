@@ -3,39 +3,308 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>会社名</title>
-  <style>
-    body{font-family:system-ui,-apple-system; margin:40px; line-height:1.8}
-    header{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap}
-    nav a{margin-right:12px; color:inherit; text-decoration:none}
-    nav a:hover{text-decoration:underline}
-    .hero{margin-top:24px; padding:26px; border:1px solid #ddd; border-radius:16px}
-    .tag{display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:999px; font-size:12px}
-  </style>
+  <title>会社名 | 確かな技術を</title>
+  <meta name="description" content="会社の説明をここに。施工技術・実績・ニュース・採用・お問い合わせへの導線をまとめた公式サイト。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <header>
-    <h1>会社名</h1>
-    <nav>
-      <a href="#company">会社概要</a>
-      <a href="#service">事業</a>
-      <a href="#contact">お問い合わせ</a>
-    </nav>
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">COMPANY</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#philosophy">理念</a>
+        <a href="#technology">施工技術</a>
+        <a href="#works">施工実績</a>
+        <a href="#news">新着情報</a>
+        <a href="#recruit">採用</a>
+        <a class="nav__cta" href="#contact">お問い合わせ</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="drawer">
+        MENU
+      </button>
+    </div>
+
+    <div class="drawer" id="drawer">
+      <div class="container drawer__panel">
+        <a href="#philosophy">理念</a>
+        <a href="#technology">施工技術</a>
+        <a href="#works">施工実績</a>
+        <a href="#news">新着情報</a>
+        <a href="#recruit">採用</a>
+        <a href="#contact">お問い合わせ</a>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="tag">A Certain Tech.</div>
-    <h2>キャッチコピーを入れる</h2>
-    <p>ここに会社の説明文を入れます。</p>
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <div class="pill">A CERTAIN TECH.</div>
+        <h1 class="hero__title">確かな技術を、<br>まっすぐに。</h1>
+        <p class="hero__lead">
+          ここに会社の説明文を入れます。強み・対応領域・実績などを短く。
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">お問い合わせ</a>
+          <a class="btn" href="#works">施工実績を見る</a>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="hero__cardTitle">対応領域</div>
+        <ul class="hero__list">
+          <li>建築・改修</li>
+          <li>公共施設</li>
+          <li>橋梁・プラント</li>
+          <li>防水・補修</li>
+        </ul>
+        <a class="linkArrow" href="#technology">施工技術へ →</a>
+      </div>
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
   </section>
 
-  <h2 id="company">会社概要</h2>
-  <p>所在地 / 代表者 / 設立 / 事業内容など</p>
+  <!-- Philosophy -->
+  <section class="section" id="philosophy">
+    <div class="container">
+      <div class="section__head">
+        <div class="kicker">Philosophy</div>
+        <h2>理念</h2>
+        <p>品質・安全・スピード。現場で積み上げた価値を、言葉で短く。</p>
+      </div>
 
-  <h2 id="service">事業</h2>
-  <p>サービス説明</p>
+      <div class="grid grid--2">
+        <article class="card">
+          <div class="card__pad">
+            <h3>品質へのこだわり</h3>
+            <p>具体的な取り組み（検査体制／教育／標準化など）を2〜3行で。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__pad">
+            <h3>安全と信頼</h3>
+            <p>安全管理・工程管理の方針を短く。実績の数字があると強い。</p>
+          </div>
+        </article>
+      </div>
 
-  <h2 id="contact">お問い合わせ</h2>
-  <p>メール：info@example.com</p>
+      <div class="section__foot">
+        <a class="btn btn--small" href="#contact">相談してみる</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology -->
+  <section class="section section--alt" id="technology">
+    <div class="container">
+      <div class="section__head">
+        <div class="kicker">Technology</div>
+        <h2>施工技術</h2>
+        <p>「何ができるか」をカードで整理すると、トップが締まります。</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card card--media">
+          <div class="media media--a" role="img" aria-label="技術イメージ"></div>
+          <div class="card__pad">
+            <h3>塗装・防食</h3>
+            <p>適用範囲や得意工種を短く。</p>
+          </div>
+        </article>
+
+        <article class="card card--media">
+          <div class="media media--b" role="img" aria-label="技術イメージ"></div>
+          <div class="card__pad">
+            <h3>防水・補修</h3>
+            <p>品質管理ポイントを1つ添える。</p>
+          </div>
+        </article>
+
+        <article class="card card--media">
+          <div class="media media--c" role="img" aria-label="技術イメージ"></div>
+          <div class="card__pad">
+            <h3>工程・安全管理</h3>
+            <p>体制（資格者／教育）など。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="section__foot">
+        <a class="linkArrow" href="#works">施工実績を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section class="section" id="works">
+    <div class="container">
+      <div class="section__head">
+        <div class="kicker">Result</div>
+        <h2>施工実績</h2>
+        <p>カテゴリ導線＋カード3〜6枚が見やすいです。</p>
+      </div>
+
+      <div class="chips" aria-label="Work categories">
+        <button class="chip is-active" data-filter="all" type="button">すべて</button>
+        <button class="chip" data-filter="building" type="button">建築</button>
+        <button class="chip" data-filter="public" type="button">公共</button>
+        <button class="chip" data-filter="bridge" type="button">橋梁</button>
+        <button class="chip" data-filter="plant" type="button">プラント</button>
+      </div>
+
+      <div class="grid grid--3" id="worksGrid">
+        <article class="card work" data-type="building">
+          <div class="work__thumb work__thumb--1" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2025 / 建築</div>
+            <h3>実績タイトル #1</h3>
+            <p>場所・工種・ポイントなどを短く。</p>
+          </div>
+        </article>
+
+        <article class="card work" data-type="public">
+          <div class="work__thumb work__thumb--2" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2024 / 公共</div>
+            <h3>実績タイトル #2</h3>
+            <p>場所・工種・ポイントなどを短く。</p>
+          </div>
+        </article>
+
+        <article class="card work" data-type="bridge">
+          <div class="work__thumb work__thumb--3" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2024 / 橋梁</div>
+            <h3>実績タイトル #3</h3>
+            <p>場所・工種・ポイントなどを短く。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="section__foot">
+        <a class="btn btn--small" href="#contact">案件の相談をする</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section section--alt" id="news">
+    <div class="container">
+      <div class="section__head">
+        <div class="kicker">News</div>
+        <h2>新着情報</h2>
+        <p>まずは固定でOK。後からスプレッドシート連携にもできます。</p>
+      </div>
+
+      <div class="card">
+        <div class="card__pad news" id="newsList">
+          <a class="news__item" href="#" aria-label="news item">
+            <span class="news__date">2025.12.30</span>
+            <span class="news__title">サイトを公開しました</span>
+            <span class="news__arrow">→</span>
+          </a>
+          <a class="news__item" href="#" aria-label="news item">
+            <span class="news__date">2025.12.15</span>
+            <span class="news__title">年末年始休業のお知らせ</span>
+            <span class="news__arrow">→</span>
+          </a>
+          <a class="news__item" href="#" aria-label="news item">
+            <span class="news__date">2025.11.01</span>
+            <span class="news__title">採用情報を更新しました</span>
+            <span class="news__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="section__foot">
+        <a class="linkArrow" href="#contact">お問い合わせはこちら →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruit -->
+  <section class="section" id="recruit">
+    <div class="container">
+      <div class="section__head">
+        <div class="kicker">Recruit</div>
+        <h2>採用情報</h2>
+        <p>「現場の魅力・働く環境」を短いカードで。</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card">
+          <div class="card__pad">
+            <h3>募集職種</h3>
+            <p>例）施工管理／塗装工／営業 など。要点だけ。</p>
+            <div class="spacer"></div>
+            <a class="btn btn--primary btn--small" href="#contact">応募・問い合わせ</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__pad">
+            <h3>働く環境</h3>
+            <p>教育制度・資格支援・福利厚生などを短く。</p>
+            <div class="spacer"></div>
+            <a class="linkArrow" href="#contact">詳しく聞く →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--contact" id="contact">
+    <div class="container">
+      <div class="contactBox">
+        <div>
+          <div class="kicker kicker--light">Contact</div>
+          <h2 class="contactBox__title">お問い合わせ</h2>
+          <p class="contactBox__lead">フォームは後から追加できます。まずは連絡先を置くだけでもOK。</p>
+        </div>
+
+        <div class="contactBox__actions">
+          <a class="btn btn--primary" href="mailto:info@example.com">メールする</a>
+          <a class="btn btn--ghost" href="tel:0000000000">電話する</a>
+          <a class="btn btn--ghost" href="#top">ページ上部へ</a>
+        </div>
+      </div>
+
+      <div class="footerCard">
+        <div class="footerCard__grid">
+          <div>
+            <div class="footerCard__brand">COMPANY</div>
+            <div class="footerCard__text">〒000-0000 都道府県 市区町村…</div>
+            <div class="footerCard__text">TEL 00-0000-0000</div>
+          </div>
+          <div class="footerCard__links">
+            <a href="#philosophy">理念</a>
+            <a href="#technology">施工技術</a>
+            <a href="#works">施工実績</a>
+            <a href="#news">新着情報</a>
+            <a href="#recruit">採用</a>
+          </div>
+        </div>
+        <div class="footerCard__bottom">
+          <small>© <span id="year"></span> COMPANY. All Rights Reserved.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
 </body>
 </html>
