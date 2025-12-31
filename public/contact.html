@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>お問い合わせ | 株式会社光塗装工業所</title>
   <meta name="description" content="株式会社光塗装工業所へのお問い合わせフォーム。" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
+
+  <style>
+    /* フォーム埋め込みを見やすくする */
+    .formWrap { border:1px solid #e6e9ef; border-radius:18px; overflow:hidden; background:#fff; }
+    .formNote { color:#5b6575; line-height:1.8; margin:0 0 14px; }
+    .formIframe { width:100%; height:1200px; border:0; } /* 長さは必要に応じて調整 */
+  </style>
 </head>
 <body>
   <header class="header" id="top">
@@ -47,41 +55,17 @@
       <div class="section__head">
         <div class="kicker">Contact</div>
         <h2>お問い合わせ</h2>
-        <p>下記フォームより送信してください。担当よりご連絡いたします。</p>
+        <p class="formNote">以下のフォームより送信してください。送信内容は担当者にメールで通知されます。</p>
       </div>
 
-      <div class="card">
-        <div class="card__pad">
-          <form id="contactForm">
-            <!-- スパム対策（人は触らない） -->
-            <input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px;">
-
-            <label style="display:block; font-weight:900; margin:10px 0 6px;">お名前 *</label>
-            <input name="name" required style="width:100%; padding:12px 14px; border:1px solid #e6e9ef; border-radius:12px;">
-
-            <label style="display:block; font-weight:900; margin:14px 0 6px;">メールアドレス *</label>
-            <input name="email" type="email" required style="width:100%; padding:12px 14px; border:1px solid #e6e9ef; border-radius:12px;">
-
-            <label style="display:block; font-weight:900; margin:14px 0 6px;">会社名（任意）</label>
-            <input name="company" style="width:100%; padding:12px 14px; border:1px solid #e6e9ef; border-radius:12px;">
-
-            <label style="display:block; font-weight:900; margin:14px 0 6px;">件名 *</label>
-            <input name="subject" required style="width:100%; padding:12px 14px; border:1px solid #e6e9ef; border-radius:12px;">
-
-            <label style="display:block; font-weight:900; margin:14px 0 6px;">お問い合わせ内容 *</label>
-            <textarea name="message" required rows="6" style="width:100%; padding:12px 14px; border:1px solid #e6e9ef; border-radius:12px; line-height:1.8;"></textarea>
-
-            <div style="margin:14px 0;">
-              <label style="display:flex; gap:10px; align-items:flex-start;">
-                <input type="checkbox" required style="margin-top:4px;">
-                <span style="color:#5b6575; line-height:1.7;">内容を送信することに同意します。</span>
-              </label>
-            </div>
-
-            <button class="btn btn--primary" type="submit">送信する</button>
-            <span id="formMsg" style="margin-left:10px; color:#5b6575;"></span>
-          </form>
-        </div>
+      <div class="formWrap">
+        <!-- ここをGoogleフォームの埋め込みURLに差し替え -->
+        <iframe
+          class="formIframe"
+          src="YOUR_FORM_EMBED_URL"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="お問い合わせフォーム"></iframe>
       </div>
 
       <div class="section__foot">
@@ -91,36 +75,5 @@
   </section>
 
   <script src="./script.js"></script>
-  <script>
-    // /api/contact に送る（Cloudflare Pages Functions側でメール送信）
-    const form = document.getElementById("contactForm");
-    const msg = document.getElementById("formMsg");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      msg.textContent = "送信中…";
-
-      const fd = new FormData(form);
-      if (fd.get("website")) { msg.textContent = "送信できませんでした。"; return; } // honeypot
-
-      const payload = Object.fromEntries(fd.entries());
-      delete payload.website;
-
-      try{
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-        if(!res.ok) throw new Error("bad response");
-
-        form.reset();
-        msg.textContent = "送信しました。ありがとうございます。";
-      }catch(err){
-        msg.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
-      }
-    });
-  </script>
 </body>
 </html>
-
