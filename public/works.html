@@ -1,1 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>施工実績 | 株式会社光塗装工業所</title>
+  <meta name="description" content="株式会社光塗装工業所の施工実績。建築・公共・橋梁など。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="./" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">株式会社光塗装工業所</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="./company.html">会社概要</a>
+        <a href="./philosophy.html">理念</a>
+        <a href="./technology.html">施工技術</a>
+        <a href="./works.html">施工実績</a>
+        <a href="./recruit.html">採用</a>
+        <a class="nav__cta" href="./#contact">お問い合わせ</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="drawer">MENU</button>
+    </div>
+
+    <div class="drawer" id="drawer">
+      <div class="container drawer__panel">
+        <a href="./company.html">会社概要</a>
+        <a href="./philosophy.html">理念</a>
+        <a href="./technology.html">施工技術</a>
+        <a href="./works.html">施工実績</a>
+        <a href="./recruit.html">採用</a>
+        <a href="./#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div class="kicker">Works</div>
+        <h2>施工実績</h2>
+        <p>※ここはサンプルです。実績タイトル・年・カテゴリ・説明を実データに差し替えてください。</p>
+      </div>
+
+      <div class="chips" aria-label="Work categories">
+        <button class="chip is-active" data-filter="all" type="button">すべて</button>
+        <button class="chip" data-filter="building" type="button">建築</button>
+        <button class="chip" data-filter="public" type="button">公共</button>
+        <button class="chip" data-filter="bridge" type="button">橋梁</button>
+        <button class="chip" data-filter="plant" type="button">プラント</button>
+      </div>
+
+      <div class="grid grid--3" id="worksGrid">
+        <article class="card work" data-type="building">
+          <div class="work__thumb work__thumb--1" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2025 / 建築</div>
+            <h3>外壁塗装工事（例）</h3>
+            <p>下地処理から仕上げまで。近隣配慮・工程管理を徹底。</p>
+          </div>
+        </article>
+
+        <article class="card work" data-type="public">
+          <div class="work__thumb work__thumb--2" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2024 / 公共</div>
+            <h3>公共施設 改修塗装（例）</h3>
+            <p>安全第一で作業区画を管理し、品質検査を実施。</p>
+          </div>
+        </article>
+
+        <article class="card work" data-type="bridge">
+          <div class="work__thumb work__thumb--3" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2024 / 橋梁</div>
+            <h3>鋼部材 防食塗装（例）</h3>
+            <p>素地調整・膜厚管理を徹底し、耐久性を確保。</p>
+          </div>
+        </article>
+
+        <article class="card work" data-type="plant">
+          <div class="work__thumb work__thumb--1" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2023 / プラント</div>
+            <h3>設備塗装・補修（例）</h3>
+            <p>稼働計画に合わせた工程調整と安全管理。</p>
+          </div>
+        </article>
+
+        <article class="card work" data-type="building">
+          <div class="work__thumb work__thumb--2" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2023 / 建築</div>
+            <h3>屋根・鉄部 塗装（例）</h3>
+            <p>ケレンから仕上げまで一貫対応。</p>
+          </div>
+        </article>
+
+        <article class="card work" data-type="public">
+          <div class="work__thumb work__thumb--3" aria-hidden="true"></div>
+          <div class="card__pad">
+            <div class="work__meta">2022 / 公共</div>
+            <h3>防水・補修（例）</h3>
+            <p>既存状態に合わせた工法選定で再発防止。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="section__foot">
+        <a class="btn btn--small" href="./#contact">案件の相談をする</a>
+        <span style="display:inline-block;width:8px"></span>
+        <a class="linkArrow" href="./">トップへ戻る →</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html>
 
