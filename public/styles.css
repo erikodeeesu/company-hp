@@ -333,3 +333,24 @@ h2{margin:10px 0 12px; font-size:28px;}
   .kv__row{grid-template-columns:1fr;}
 }
 
+/* Header logo size fix */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand__logo{
+  width:36px;      /* ←ここで大きさ調整 */
+  height:36px;
+  object-fit:contain;
+  display:block;
+}
+
+@media (max-width: 640px){
+  .brand__logo{
+    width:28px;
+    height:28px;
+  }
+}
+
