@@ -4,29 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>株式会社光塗装工業所 | 確かな技術を</title>
-  <meta name="description" content="会社の説明をここに。施工技術・実績・ニュース・採用・お問い合わせへの導線をまとめた公式サイト。" />
+  <meta name="description" content="株式会社光塗装工業所の公式サイト。施工技術・施工実績・採用・お問い合わせ。" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <!-- Header -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Home">
+      <a class="brand" href="./" aria-label="Home">
         <span class="brand__mark" aria-hidden="true"></span>
         <span class="brand__name">株式会社光塗装工業所</span>
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#philosophy">理念</a>
-        <a href="#technology">施工技術</a>
-        <a href="#works">施工実績</a>
-        <a href="#news">新着情報</a>
-        <a href="#recruit">採用</a>
+        <a href="./company.html">会社概要</a>
+        <a href="./philosophy.html">理念</a>
+        <a href="./technology.html">施工技術</a>
+        <a href="./works.html">施工実績</a>
+        <a href="./recruit.html">採用</a>
         <a class="nav__cta" href="#contact">お問い合わせ</a>
       </nav>
 
@@ -37,243 +35,178 @@
 
     <div class="drawer" id="drawer">
       <div class="container drawer__panel">
-        <a href="#philosophy">理念</a>
-        <a href="#technology">施工技術</a>
-        <a href="#works">施工実績</a>
-        <a href="#news">新着情報</a>
-        <a href="#recruit">採用</a>
+        <a href="./company.html">会社概要</a>
+        <a href="./philosophy.html">理念</a>
+        <a href="./technology.html">施工技術</a>
+        <a href="./works.html">施工実績</a>
+        <a href="./recruit.html">採用</a>
         <a href="#contact">お問い合わせ</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero" aria-label="Hero">
     <div class="container hero__inner">
       <div class="hero__copy">
-        <div class="pill">A CERTAIN TECH.</div>
+        <div class="pill">HIKARI PAINTING</div>
         <h1 class="hero__title">確かな技術を、<br>まっすぐに。</h1>
         <p class="hero__lead">
-          ここに会社の説明文を入れます。強み・対応領域・実績などを短く。
+          兵庫県神戸市を拠点に、塗装・防食・補修工事を通じて建物や構造物の価値を守ります。
         </p>
 
         <div class="hero__actions">
           <a class="btn btn--primary" href="#contact">お問い合わせ</a>
-          <a class="btn" href="#works">施工実績を見る</a>
+          <a class="btn" href="./works.html">施工実績を見る</a>
         </div>
       </div>
 
       <div class="hero__card">
         <div class="hero__cardTitle">対応領域</div>
         <ul class="hero__list">
-          <li>建築・改修</li>
-          <li>公共施設</li>
-          <li>橋梁・プラント</li>
+          <li>塗装・防食</li>
           <li>防水・補修</li>
+          <li>建築・改修</li>
+          <li>公共・橋梁</li>
         </ul>
-        <a class="linkArrow" href="#technology">施工技術へ →</a>
+        <a class="linkArrow" href="./technology.html">施工技術へ →</a>
       </div>
     </div>
     <div class="hero__shade" aria-hidden="true"></div>
   </section>
 
-  <!-- Philosophy -->
-  <section class="section" id="philosophy">
+  <!-- 会社概要（トップ用の短い紹介） -->
+  <section class="section" id="company">
+    <div class="container">
+      <div class="section__head">
+        <div class="kicker">Company</div>
+        <h2>会社概要</h2>
+        <p>基本情報と、私たちの拠点について。</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card">
+          <div class="card__pad">
+            <h3>所在地</h3>
+            <p>〒655-0051 兵庫県神戸市垂水区舞多聞西5-10-1</p>
+            <div class="spacer"></div>
+            <h3>連絡先</h3>
+            <p>TEL 078-782-5534 / Mail hikari07@ares.eonet.ne.jp</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__pad">
+            <h3>事業内容</h3>
+            <p>塗装・防食・補修・改修工事 等</p>
+            <div class="spacer"></div>
+            <a class="btn btn--primary btn--small" href="./company.html">会社概要の詳細</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- トップでは「紹介だけ」にして別ページへ誘導 -->
+  <section class="section section--alt">
     <div class="container">
       <div class="section__head">
         <div class="kicker">Philosophy</div>
         <h2>理念</h2>
-        <p>品質・安全・スピード。現場で積み上げた価値を、言葉で短く。</p>
+        <p>品質・安全・誠実。現場で積み上げた価値を、言葉に。</p>
       </div>
 
-      <div class="grid grid--2">
-        <article class="card">
-          <div class="card__pad">
-            <h3>品質へのこだわり</h3>
-            <p>具体的な取り組み（検査体制／教育／標準化など）を2〜3行で。</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__pad">
-            <h3>安全と信頼</h3>
-            <p>安全管理・工程管理の方針を短く。実績の数字があると強い。</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="section__foot">
-        <a class="btn btn--small" href="#contact">相談してみる</a>
+      <div class="card">
+        <div class="card__pad">
+          <p>私たちは、施工品質と安全管理を最優先に、信頼される仕事を積み重ねます。</p>
+          <div class="spacer"></div>
+          <a class="linkArrow" href="./philosophy.html">理念の詳細 →</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Technology -->
-  <section class="section section--alt" id="technology">
+  <section class="section">
     <div class="container">
       <div class="section__head">
         <div class="kicker">Technology</div>
         <h2>施工技術</h2>
-        <p>「何ができるか」をカードで整理すると、トップが締まります。</p>
+        <p>対応工種・管理体制などを整理してご紹介します。</p>
       </div>
 
       <div class="grid grid--3">
         <article class="card card--media">
-          <div class="media media--a" role="img" aria-label="技術イメージ"></div>
+          <div class="media media--a" aria-hidden="true"></div>
           <div class="card__pad">
             <h3>塗装・防食</h3>
-            <p>適用範囲や得意工種を短く。</p>
+            <p>素材と環境に合わせた仕様設計。</p>
           </div>
         </article>
-
         <article class="card card--media">
-          <div class="media media--b" role="img" aria-label="技術イメージ"></div>
+          <div class="media media--b" aria-hidden="true"></div>
           <div class="card__pad">
             <h3>防水・補修</h3>
-            <p>品質管理ポイントを1つ添える。</p>
+            <p>長寿命化に向けた提案と施工。</p>
           </div>
         </article>
-
         <article class="card card--media">
-          <div class="media media--c" role="img" aria-label="技術イメージ"></div>
+          <div class="media media--c" aria-hidden="true"></div>
           <div class="card__pad">
             <h3>工程・安全管理</h3>
-            <p>体制（資格者／教育）など。</p>
+            <p>計画・記録・確認の徹底。</p>
           </div>
         </article>
       </div>
 
       <div class="section__foot">
-        <a class="linkArrow" href="#works">施工実績を見る →</a>
+        <a class="linkArrow" href="./technology.html">施工技術の詳細 →</a>
       </div>
     </div>
   </section>
 
-  <!-- Works -->
-  <section class="section" id="works">
+  <section class="section section--alt">
     <div class="container">
       <div class="section__head">
-        <div class="kicker">Result</div>
+        <div class="kicker">Works</div>
         <h2>施工実績</h2>
-        <p>カテゴリ導線＋カード3〜6枚が見やすいです。</p>
-      </div>
-
-      <div class="chips" aria-label="Work categories">
-        <button class="chip is-active" data-filter="all" type="button">すべて</button>
-        <button class="chip" data-filter="building" type="button">建築</button>
-        <button class="chip" data-filter="public" type="button">公共</button>
-        <button class="chip" data-filter="bridge" type="button">橋梁</button>
-        <button class="chip" data-filter="plant" type="button">プラント</button>
-      </div>
-
-      <div class="grid grid--3" id="worksGrid">
-        <article class="card work" data-type="building">
-          <div class="work__thumb work__thumb--1" aria-hidden="true"></div>
-          <div class="card__pad">
-            <div class="work__meta">2025 / 建築</div>
-            <h3>実績タイトル #1</h3>
-            <p>場所・工種・ポイントなどを短く。</p>
-          </div>
-        </article>
-
-        <article class="card work" data-type="public">
-          <div class="work__thumb work__thumb--2" aria-hidden="true"></div>
-          <div class="card__pad">
-            <div class="work__meta">2024 / 公共</div>
-            <h3>実績タイトル #2</h3>
-            <p>場所・工種・ポイントなどを短く。</p>
-          </div>
-        </article>
-
-        <article class="card work" data-type="bridge">
-          <div class="work__thumb work__thumb--3" aria-hidden="true"></div>
-          <div class="card__pad">
-            <div class="work__meta">2024 / 橋梁</div>
-            <h3>実績タイトル #3</h3>
-            <p>場所・工種・ポイントなどを短く。</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="section__foot">
-        <a class="btn btn--small" href="#contact">案件の相談をする</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- News -->
-  <section class="section section--alt" id="news">
-    <div class="container">
-      <div class="section__head">
-        <div class="kicker">News</div>
-        <h2>新着情報</h2>
-        <p>まずは固定でOK。後からスプレッドシート連携にもできます。</p>
+        <p>実績は別ページで一覧化すると見やすいです。</p>
       </div>
 
       <div class="card">
-        <div class="card__pad news" id="newsList">
-          <a class="news__item" href="#" aria-label="news item">
-            <span class="news__date">2025.12.30</span>
-            <span class="news__title">サイトを公開しました</span>
-            <span class="news__arrow">→</span>
-          </a>
-          <a class="news__item" href="#" aria-label="news item">
-            <span class="news__date">2025.12.15</span>
-            <span class="news__title">年末年始休業のお知らせ</span>
-            <span class="news__arrow">→</span>
-          </a>
-          <a class="news__item" href="#" aria-label="news item">
-            <span class="news__date">2025.11.01</span>
-            <span class="news__title">採用情報を更新しました</span>
-            <span class="news__arrow">→</span>
-          </a>
+        <div class="card__pad">
+          <p>建築／公共／橋梁など、カテゴリー別にご紹介します。</p>
+          <div class="spacer"></div>
+          <a class="btn btn--primary btn--small" href="./works.html">施工実績を見る</a>
         </div>
-      </div>
-
-      <div class="section__foot">
-        <a class="linkArrow" href="#contact">お問い合わせはこちら →</a>
       </div>
     </div>
   </section>
 
-  <!-- Recruit -->
-  <section class="section" id="recruit">
+  <section class="section">
     <div class="container">
       <div class="section__head">
         <div class="kicker">Recruit</div>
-        <h2>採用情報</h2>
-        <p>「現場の魅力・働く環境」を短いカードで。</p>
+        <h2>採用</h2>
+        <p>一緒に働く仲間を募集しています。</p>
       </div>
 
-      <div class="grid grid--2">
-        <article class="card">
-          <div class="card__pad">
-            <h3>募集職種</h3>
-            <p>例）施工管理／塗装工／営業 など。要点だけ。</p>
-            <div class="spacer"></div>
-            <a class="btn btn--primary btn--small" href="#contact">応募・問い合わせ</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__pad">
-            <h3>働く環境</h3>
-            <p>教育制度・資格支援・福利厚生などを短く。</p>
-            <div class="spacer"></div>
-            <a class="linkArrow" href="#contact">詳しく聞く →</a>
-          </div>
-        </article>
+      <div class="card">
+        <div class="card__pad">
+          <p>仕事内容・働く環境・募集要項をまとめています。</p>
+          <div class="spacer"></div>
+          <a class="btn btn--primary btn--small" href="./recruit.html">採用情報を見る</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact（ここはトップに残す） -->
   <section class="section section--contact" id="contact">
     <div class="container">
       <div class="contactBox">
         <div>
           <div class="kicker kicker--light">Contact</div>
           <h2 class="contactBox__title">お問い合わせ</h2>
-          <p class="contactBox__lead">フォームは後から追加できます。まずは連絡先を置くだけでもOK。</p>
+          <p class="contactBox__lead">ご相談・お見積りなど、お気軽にご連絡ください。</p>
         </div>
 
         <div class="contactBox__actions">
@@ -291,15 +224,15 @@
             <div class="footerCard__text">TEL 078-782-5534</div>
           </div>
           <div class="footerCard__links">
-            <a href="#philosophy">理念</a>
-            <a href="#technology">施工技術</a>
-            <a href="#works">施工実績</a>
-            <a href="#news">新着情報</a>
-            <a href="#recruit">採用</a>
+            <a href="./company.html">会社概要</a>
+            <a href="./philosophy.html">理念</a>
+            <a href="./technology.html">施工技術</a>
+            <a href="./works.html">施工実績</a>
+            <a href="./recruit.html">採用</a>
           </div>
         </div>
         <div class="footerCard__bottom">
-          <small>© <span id="year"></span> HIKARI PAINTING CO.. All Rights Reserved.</small>
+          <small>© <span id="year"></span> HIKARI PAINTING CO. All Rights Reserved.</small>
         </div>
       </div>
     </div>
