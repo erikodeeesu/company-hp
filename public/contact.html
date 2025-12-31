@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="./styles.css" />
 
   <style>
-    /* フォーム埋め込みを見やすくする */
     .formWrap { border:1px solid #e6e9ef; border-radius:18px; overflow:hidden; background:#fff; }
     .formNote { color:#5b6575; line-height:1.8; margin:0 0 14px; }
-    .formIframe { width:100%; height:1200px; border:0; } /* 長さは必要に応じて調整 */
+    .formIframe { width:100%; height:1200px; border:0; }
+    @media (max-width: 640px){ .formIframe { height: 1400px; } }
   </style>
 </head>
 <body>
@@ -55,14 +55,13 @@
       <div class="section__head">
         <div class="kicker">Contact</div>
         <h2>お問い合わせ</h2>
-        <p class="formNote">以下のフォームより送信してください。送信内容は担当者にメールで通知されます。</p>
+        <p class="formNote">以下のフォームより送信してください。送信内容は担当者へメールで通知されます。</p>
       </div>
 
       <div class="formWrap">
-        <!-- ここをGoogleフォームの埋め込みURLに差し替え -->
         <iframe
           class="formIframe"
-          src="YOUR_FORM_EMBED_URL"
+          src="https://docs.google.com/forms/d/e/1_IFbaV05aMxXD5G0r3pewQ-luc5sUY3pAzU0rEwT-zE/viewform?embedded=true"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="お問い合わせフォーム"></iframe>
