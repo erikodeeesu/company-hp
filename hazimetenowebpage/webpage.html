@@ -1,2 +1,1133 @@
-<h>中川くーん！ヤッホー！</h>
-<h1>初めてのコミットです</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大阪・兵庫の屋根・外壁塗装なら株式会社光塗装工業所 | 防水・防錆の専門会社</title>
+  <meta name="description" content="大阪・兵庫（神戸市垂水区）を拠点とする塗装専門会社。外壁・屋根塗装・防水・防錆施工に対応。30年以上の実績と確かな技術力で建物の価値を守ります。無料見積もり受付中。TEL:078-782-5534">
+  <meta name="keywords" content="屋根塗装,外壁塗装,防水工事,防錆塗装,神戸市,大阪府,兵庫県,塗装工事,工場塗装,光塗装工業所,垂水区,屋根補修">
+
+  <!-- OGP -->
+  <meta property="og:title" content="大阪・兵庫の屋根・外壁塗装 | 株式会社光塗装工業所">
+  <meta property="og:description" content="確かな技術を、まっすぐに。外壁・屋根塗装、防水・防錆施工。無料見積もり受付中。TEL:078-782-5534">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "株式会社光塗装工業所",
+    "description": "大阪・兵庫を拠点に外壁・屋根塗装、防水・防錆施工を手がける専門会社",
+    "telephone": "078-782-5534",
+    "email": "hikari07@ares.eonet.ne.jp",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "655-0051",
+      "addressRegion": "兵庫県",
+      "addressLocality": "神戸市垂水区",
+      "streetAddress": "舞多聞西5-10-1"
+    },
+    "areaServed": ["大阪府", "兵庫県"],
+    "serviceType": ["屋根塗装", "外壁塗装", "防水施工", "防錆施工"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --brand: #0f766e;
+      --brand-mid: #14b8a6;
+      --brand2: #0ea5e9;
+      --brand2-light: #38bdf8;
+      --ink: #0b1220;
+      --muted: #5b6575;
+      --line: #e6e9ef;
+      --soft: #f4f6fb;
+      --bg: #ffffff;
+      --radius: 18px;
+      --shadow-sm: 0 4px 16px rgba(0,0,0,.06);
+      --shadow: 0 12px 32px rgba(0,0,0,.10);
+      --shadow-lg: 0 20px 56px rgba(0,0,0,.14);
+      --max: 1100px;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif;
+      color: var(--ink); background: var(--bg); overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    button { font: inherit; cursor: pointer; }
+    ul { list-style: none; }
+
+    /* ===== KEYFRAMES ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @keyframes floatY {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; } 50% { opacity: .5; }
+    }
+    @keyframes shimmerBg {
+      0%   { background-position: -400% center; }
+      100% { background-position: 400% center; }
+    }
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); } to { transform: rotate(360deg); }
+    }
+    @keyframes gradientShift {
+      0%,100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== CONTAINER ===== */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(0,0,0,.07);
+      transition: box-shadow .3s;
+    }
+    .header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+    .header__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; flex-shrink: 0; }
+    .brand__logo { width: 36px; height: 36px; object-fit: contain; }
+    .brand__name { letter-spacing: .04em; font-size: 14px; line-height: 1.3; }
+    .nav { display: flex; gap: 2px; align-items: center; }
+    .nav a {
+      padding: 9px 11px; border-radius: 10px;
+      font-weight: 700; font-size: 13.5px; transition: background .15s;
+    }
+    .nav a:hover { background: var(--soft); }
+    .nav__cta {
+      background: var(--brand); color: #fff !important;
+      padding: 10px 18px !important; border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(15,118,110,.32); margin-left: 6px;
+    }
+    .nav__cta:hover { filter: brightness(.92); background: var(--brand) !important; }
+    .menuBtn {
+      display: none; border: 1px solid var(--line);
+      background: transparent; border-radius: 10px;
+      padding: 9px 13px; font-weight: 900; font-size: 13px;
+    }
+    .drawer { display: none; border-top: 1px solid var(--line); }
+    .drawer__panel { display: grid; gap: 4px; padding: 12px 0 16px; }
+    .drawer a { display: block; padding: 13px 12px; border-radius: 10px; font-weight: 700; }
+    .drawer a:hover { background: var(--soft); }
+    .drawer.is-open { display: block; }
+    @media (max-width: 860px) { .nav { display: none; } .menuBtn { display: inline-flex; } }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative; min-height: 92vh;
+      background:
+        linear-gradient(155deg, rgba(5,10,22,.82) 0%, rgba(8,18,34,.65) 55%, rgba(10,100,90,.40) 100%),
+        url('./images/roof-05-kanryo.jpg') center/cover no-repeat;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    /* Blueprint grid */
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 56px 56px; pointer-events: none;
+    }
+    /* Radial glow */
+    .hero::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 60% at 5% 80%, rgba(20,184,166,.18), transparent),
+        radial-gradient(ellipse 50% 50% at 90% 20%, rgba(14,165,233,.15), transparent);
+    }
+    .hero__inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1.35fr .65fr;
+      gap: 36px; padding: 110px 0 90px; align-items: center;
+    }
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px; border-radius: 999px;
+      background: rgba(20,184,166,.18); border: 1px solid rgba(20,184,166,.42);
+      color: #5eead4; letter-spacing: .12em; font-weight: 900; font-size: 11.5px;
+      margin-bottom: 22px; animation: fadeIn 1s ease both;
+    }
+    .hero__badge-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #5eead4;
+      animation: pulse 2s ease infinite;
+    }
+    .hero__title {
+      color: #fff; font-size: 54px; line-height: 1.18; font-weight: 900;
+      letter-spacing: .03em; margin-bottom: 18px;
+      animation: fadeUp .9s ease .15s both;
+    }
+    .hero__title em {
+      font-style: normal;
+      background: linear-gradient(110deg, #5eead4 0%, #38bdf8 50%, #5eead4 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: shimmerBg 4s linear infinite;
+    }
+    .hero__lead {
+      color: rgba(255,255,255,.78); line-height: 2; font-size: 16.5px;
+      max-width: 50ch; margin-bottom: 28px;
+      animation: fadeUp .9s ease .3s both;
+    }
+    .hero__actions {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      animation: fadeUp .9s ease .5s both;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 24px; border-radius: 999px;
+      font-weight: 900; font-size: 15px; border: none; cursor: pointer;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn--primary {
+      background: linear-gradient(135deg, #0f766e, #0ea5e9);
+      color: #fff; box-shadow: 0 6px 24px rgba(14,165,233,.35);
+    }
+    .btn--primary:hover { box-shadow: 0 12px 36px rgba(14,165,233,.48); }
+    .btn--ghost {
+      background: rgba(255,255,255,.13); border: 1.5px solid rgba(255,255,255,.34); color: #fff;
+    }
+    .btn--ghost:hover { background: rgba(255,255,255,.22); }
+    .hero__card {
+      background: rgba(10,16,30,.55); backdrop-filter: blur(18px) saturate(150%);
+      border: 1px solid rgba(255,255,255,.18); border-radius: 22px; padding: 28px;
+      animation: fadeIn 1s ease .7s both;
+    }
+    .hero__card-label {
+      font-size: 11px; font-weight: 900; letter-spacing: .16em; color: var(--brand-mid);
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+    .hero__service-list { display: grid; gap: 12px; }
+    .hero__service-list li {
+      display: flex; align-items: center; gap: 12px;
+      color: #fff; font-weight: 700; font-size: 15px;
+    }
+    .hero__service-icon {
+      width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+      background: rgba(20,184,166,.18); border: 1px solid rgba(20,184,166,.28);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero__tel {
+      margin-top: 22px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .hero__tel-label { font-size: 11px; color: rgba(255,255,255,.52); letter-spacing: .1em; font-weight: 700; margin-bottom: 6px; }
+    .hero__tel-number { font-size: 26px; font-weight: 900; color: #fff; letter-spacing: .06em; }
+    .hero__scroll {
+      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,.45); font-size: 10.5px; font-weight: 900;
+      letter-spacing: .18em; text-align: center; z-index: 1;
+    }
+    .hero__scroll::after {
+      content: ''; display: block; width: 1px; height: 38px; margin: 8px auto 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,.45), transparent);
+    }
+    @media (max-width: 960px) {
+      .hero__inner { grid-template-columns: 1fr; padding: 80px 0 60px; gap: 28px; }
+      .hero__title { font-size: 38px; }
+      .hero__card { max-width: 420px; }
+    }
+    @media (max-width: 600px) {
+      .hero__title { font-size: 30px; }
+      .hero { min-height: 80vh; }
+    }
+
+    /* ===== STATS BAND ===== */
+    .stats-band { background: var(--ink); padding: 44px 0; }
+    .stats-band__inner {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border: 1px solid rgba(255,255,255,.1); border-radius: 16px; overflow: hidden;
+    }
+    .stat {
+      padding: 28px 20px; text-align: center;
+      background: rgba(255,255,255,.03);
+      border-right: 1px solid rgba(255,255,255,.07);
+    }
+    .stat:last-child { border-right: none; }
+    .stat__num {
+      font-size: 42px; font-weight: 900;
+      background: linear-gradient(135deg, #5eead4, #38bdf8);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .stat__unit { font-size: 20px; }
+    .stat__label { font-size: 12.5px; color: rgba(255,255,255,.55); margin-top: 6px; font-weight: 700; }
+    @media (max-width: 740px) { .stats-band__inner { grid-template-columns: repeat(2, 1fr); } .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); } }
+    @media (max-width: 400px) { .stats-band__inner { grid-template-columns: 1fr; } }
+
+    /* ===== SECTION COMMONS ===== */
+    .section { padding: 90px 0; }
+    .section--alt { background: var(--soft); }
+    .section--dark { background: var(--ink); color: #fff; }
+    .section__head { text-align: center; margin-bottom: 56px; }
+    .kicker {
+      display: inline-block; font-size: 11.5px; font-weight: 900;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--brand); margin-bottom: 10px;
+    }
+    .kicker--light { color: var(--brand-mid); }
+    .section__head h2 { font-size: 32px; font-weight: 900; margin-bottom: 14px; line-height: 1.3; }
+    .section__head p { color: var(--muted); line-height: 1.95; max-width: 62ch; margin: 0 auto; }
+    .section--dark .section__head p { color: rgba(255,255,255,.62); }
+
+    /* ===== SERVICES ===== */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 20px;
+      padding: 36px 28px; text-align: center;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .service-card:hover {
+      transform: translateY(-8px); box-shadow: var(--shadow-lg);
+      border-color: rgba(15,118,110,.28);
+    }
+    .service-icon-wrap {
+      width: 76px; height: 76px; margin: 0 auto 22px;
+      background: linear-gradient(135deg, rgba(15,118,110,.10), rgba(14,165,233,.08));
+      border-radius: 22px;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .22s;
+    }
+    .service-card:hover .service-icon-wrap {
+      background: linear-gradient(135deg, rgba(15,118,110,.16), rgba(14,165,233,.14));
+    }
+    .service-card h3 { font-size: 20px; font-weight: 900; margin-bottom: 12px; }
+    .service-card p { color: var(--muted); line-height: 1.9; font-size: 14px; margin-bottom: 22px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+    .tag {
+      padding: 5px 11px; border-radius: 7px; font-size: 12px; font-weight: 700;
+      background: rgba(15,118,110,.08); color: var(--brand);
+    }
+    @media (max-width: 860px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* ===== WORKS ===== */
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 14px;
+    }
+    .work-item {
+      position: relative; border-radius: 16px; overflow: hidden;
+      aspect-ratio: 4/3; cursor: pointer;
+    }
+    .work-item:first-child { grid-column: span 2; aspect-ratio: 16/9; }
+    .work-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .55s ease;
+    }
+    .work-item:hover img { transform: scale(1.06); }
+    .work-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(5,10,22,.80) 0%, rgba(5,10,22,.10) 50%, transparent 100%);
+      opacity: 0; transition: opacity .3s ease;
+    }
+    .work-item:hover .work-overlay { opacity: 1; }
+    .work-info {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 18px;
+      transform: translateY(8px); opacity: 0; transition: transform .3s ease, opacity .3s ease;
+    }
+    .work-item:hover .work-info { transform: translateY(0); opacity: 1; }
+    .work-info h4 { color: #fff; font-weight: 900; font-size: 15px; }
+    .work-info span { color: rgba(255,255,255,.65); font-size: 12px; font-weight: 700; display: block; margin-top: 4px; }
+    @media (max-width: 760px) {
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+      .work-item:first-child { grid-column: span 2; }
+    }
+    @media (max-width: 480px) {
+      .works-grid { grid-template-columns: 1fr; }
+      .work-item:first-child { grid-column: span 1; }
+    }
+
+    /* ===== PROCESS ===== */
+    .process-wrap {
+      position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+    }
+    .process-line {
+      position: absolute; top: 38px; left: calc(10% + 6px); right: calc(10% + 6px); height: 2px;
+      background: linear-gradient(90deg, var(--brand), var(--brand2));
+      z-index: 0;
+    }
+    .process-step { text-align: center; padding: 0 6px; position: relative; z-index: 1; }
+    .process-num {
+      width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color: #fff; font-weight: 900; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(15,118,110,.40);
+      border: 3px solid #fff;
+    }
+    .process-step img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      border-radius: 12px; margin-bottom: 14px;
+      box-shadow: var(--shadow); border: 3px solid #fff;
+    }
+    .process-step h4 { font-weight: 900; font-size: 13.5px; margin-bottom: 6px; }
+    .process-step p { font-size: 12px; color: var(--muted); line-height: 1.75; }
+    @media (max-width: 900px) {
+      .process-wrap { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .process-line { display: none; }
+    }
+    @media (max-width: 500px) { .process-wrap { grid-template-columns: 1fr; } }
+
+    /* ===== STRENGTHS ===== */
+    .strengths-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .strength-item {
+      background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.10);
+      border-radius: 18px; padding: 30px;
+      display: flex; gap: 18px; align-items: flex-start;
+      transition: background .22s, border-color .22s;
+    }
+    .strength-item:hover {
+      background: rgba(255,255,255,.09); border-color: rgba(20,184,166,.38);
+    }
+    .strength-icon-wrap {
+      width: 54px; height: 54px; flex-shrink: 0; border-radius: 15px;
+      background: linear-gradient(135deg, rgba(20,184,166,.22), rgba(56,189,248,.14));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .strength-item h3 { font-size: 18px; font-weight: 900; color: #fff; margin-bottom: 8px; }
+    .strength-item p { color: rgba(255,255,255,.62); line-height: 1.85; font-size: 14px; }
+    @media (max-width: 760px) { .strengths-grid { grid-template-columns: 1fr; } }
+
+    /* ===== FAQ ===== */
+    .faq-list { display: grid; gap: 12px; max-width: 780px; margin: 0 auto; }
+    .faq-item {
+      border: 1.5px solid var(--line); border-radius: 14px; overflow: hidden;
+      background: #fff; transition: border-color .2s;
+    }
+    .faq-item.is-open { border-color: rgba(15,118,110,.35); }
+    .faq-q {
+      width: 100%; padding: 20px 22px;
+      display: flex; align-items: center; gap: 14px;
+      background: none; border: none; text-align: left;
+      font-weight: 900; font-size: 15.5px; cursor: pointer;
+      transition: background .15s;
+    }
+    .faq-q:hover { background: var(--soft); }
+    .faq-badge {
+      width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color: #fff; font-weight: 900; font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .faq-q-text { flex: 1; }
+    .faq-chevron { color: var(--muted); transition: transform .3s ease; flex-shrink: 0; }
+    .faq-item.is-open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .38s ease, padding .38s ease;
+      color: var(--muted); line-height: 1.95; font-size: 14.5px;
+      padding: 0 22px;
+    }
+    .faq-item.is-open .faq-a { max-height: 320px; padding: 0 22px 20px; }
+
+    /* ===== CONTACT CTA ===== */
+    .section--cta {
+      background:
+        radial-gradient(ellipse 80% 60% at 15% 30%, rgba(14,165,233,.22), transparent),
+        radial-gradient(ellipse 80% 60% at 75% 55%, rgba(15,118,110,.20), transparent),
+        var(--ink);
+      color: #fff; text-align: center;
+    }
+    .cta-inner { max-width: 720px; margin: 0 auto; }
+    .cta-inner h2 { font-size: 36px; font-weight: 900; margin-bottom: 16px; }
+    .cta-inner > p { color: rgba(255,255,255,.72); line-height: 1.95; font-size: 16px; margin-bottom: 36px; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-tel { margin-top: 36px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,.12); }
+    .cta-tel p { color: rgba(255,255,255,.55); font-size: 12.5px; font-weight: 700; margin-bottom: 10px; }
+    .cta-tel-num { font-size: 40px; font-weight: 900; color: #fff; letter-spacing: .05em; }
+    .cta-tel-hours { color: rgba(255,255,255,.45); font-size: 12.5px; margin-top: 6px; }
+
+    /* ===== FOOTER ===== */
+    footer { background: #05080f; color: rgba(255,255,255,.70); padding: 48px 0 24px; }
+    .footer__inner {
+      display: grid; grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 36px; margin-bottom: 36px;
+    }
+    .footer__brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .footer__logo {
+      width: 30px; height: 30px; object-fit: contain;
+      filter: brightness(0) invert(1); opacity: .75;
+    }
+    .footer__brand-name { font-weight: 900; color: #fff; font-size: 14px; }
+    .footer__info { font-size: 13px; line-height: 2; }
+    .footer__col-title { font-weight: 900; color: #fff; font-size: 12.5px; letter-spacing: .08em; margin-bottom: 14px; }
+    .footer__links { display: grid; gap: 9px; }
+    .footer__links a { font-size: 13px; color: rgba(255,255,255,.60); transition: color .15s; }
+    .footer__links a:hover { color: var(--brand-mid); }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,.07); padding-top: 18px;
+      text-align: center; font-size: 12px; color: rgba(255,255,255,.35);
+    }
+    @media (max-width: 760px) { .footer__inner { grid-template-columns: 1fr; gap: 28px; } }
+
+    /* ===== FLOATING CTA ===== */
+    .float-cta {
+      position: fixed; right: 20px; bottom: 22px; z-index: 200;
+      background: linear-gradient(135deg, #0f766e, #0ea5e9);
+      color: #fff; font-weight: 900; font-size: 14px;
+      padding: 13px 20px; border-radius: 999px;
+      box-shadow: 0 8px 30px rgba(14,165,233,.42);
+      display: flex; align-items: center; gap: 8px;
+      animation: floatY 3.5s ease-in-out infinite;
+      transition: box-shadow .15s, transform .15s;
+    }
+    .float-cta:hover {
+      animation: none; transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 14px 40px rgba(14,165,233,.55);
+    }
+    @media (max-width: 540px) { .float-cta { font-size: 13px; padding: 11px 16px; } }
+
+    /* ===== RESPONSIVE MISC ===== */
+    @media (max-width: 640px) {
+      .section { padding: 60px 0; }
+      .section__head h2 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a class="brand" href="#top" aria-label="トップへ">
+      <img class="brand__logo" src="./images/logo.png" alt="株式会社光塗装工業所 ロゴ">
+      <span class="brand__name">株式会社光塗装工業所</span>
+    </a>
+
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#services">施工技術</a>
+      <a href="#works">施工実績</a>
+      <a href="#process">施工の流れ</a>
+      <a href="#strengths">選ばれる理由</a>
+      <a href="#faq">よくある質問</a>
+      <a class="nav__cta" href="#contact">お問い合わせ</a>
+    </nav>
+
+    <button class="menuBtn" id="menuBtn" aria-expanded="false" aria-controls="drawer" type="button">MENU</button>
+  </div>
+
+  <div class="drawer" id="drawer">
+    <div class="container drawer__panel">
+      <a href="#services">施工技術</a>
+      <a href="#works">施工実績</a>
+      <a href="#process">施工の流れ</a>
+      <a href="#strengths">選ばれる理由</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="メインビジュアル">
+  <div class="container hero__inner">
+
+    <div>
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        大阪・兵庫 地域密着 ｜ 30年以上の実績
+      </div>
+
+      <h1 class="hero__title">
+        確かな技術を、<br><em>まっすぐに。</em>
+      </h1>
+
+      <p class="hero__lead">
+        神戸を拠点に、外壁・屋根塗装から防水・防錆施工まで。<br>
+        豊富な実績と徹底した安全管理で、建物の価値を長期間守ります。
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#contact">
+          <!-- Generated SVG: phone icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.48 11a19.79 19.79 0 01-3.07-8.67A2 2 0 013.39 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          無料お見積もり
+        </a>
+        <a class="btn btn--ghost" href="#works">
+          施工実績を見る →
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__card">
+      <div class="hero__card-label">対応工種</div>
+      <ul class="hero__service-list">
+        <li>
+          <span class="hero__service-icon">
+            <!-- Generated SVG: paint roller -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="14" height="7" rx="2"/><rect x="5" y="2" width="8" height="3" rx="1"/><line x1="12" y1="12" x2="12" y2="19"/><rect x="10" y="19" width="6" height="3" rx="1.5"/></svg>
+          </span>
+          外壁・屋根塗装
+        </li>
+        <li>
+          <span class="hero__service-icon">
+            <!-- Generated SVG: water drop -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"><path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0C19 10 12 2 12 2z"/><path d="M9 17a3 3 0 003 3"/></svg>
+          </span>
+          防水施工
+        </li>
+        <li>
+          <span class="hero__service-icon">
+            <!-- Generated SVG: shield -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M12 2L4 6v6c0 5.5 3.5 10 8 12 4.5-2 8-6.5 8-12V6L12 2z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </span>
+          防錆施工
+        </li>
+        <li>
+          <span class="hero__service-icon">
+            <!-- Generated SVG: fire/disaster prevention -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"><path d="M8.5 14.5A2.5 2.5 0 0011 17h2a2.5 2.5 0 000-5H11a2.5 2.5 0 01-2.5-2.5V9a4 4 0 018 0v2"/><path d="M12 22V17"/></svg>
+          </span>
+          防災商品の塗装
+        </li>
+      </ul>
+      <div class="hero__tel">
+        <div class="hero__tel-label">TEL（平日 8:00〜17:00）</div>
+        <div class="hero__tel-number">078-782-5534</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="hero__scroll" aria-hidden="true">SCROLL</div>
+</section>
+
+<!-- ===== STATS BAND ===== -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-band__inner">
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-target="30">0</span><span class="stat__unit">年+</span></div>
+        <div class="stat__label">施工実績年数</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-target="500">0</span><span class="stat__unit">件+</span></div>
+        <div class="stat__label">累計施工件数</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-target="2">0</span><span class="stat__unit">府県</span></div>
+        <div class="stat__label">対応エリア（大阪・兵庫）</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-target="100">0</span><span class="stat__unit">%</span></div>
+        <div class="stat__label">安全管理徹底</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker">Services</div>
+      <h2>施工技術・対応工種</h2>
+      <p>素材・環境・用途に合わせた最適な施工仕様を設計。確かな技術力で、建物の長寿命化を実現します。</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <!-- Generated SVG: Large paint roller icon -->
+          <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
+            <rect x="4" y="10" width="28" height="13" rx="4" fill="url(#sg1)"/>
+            <rect x="10" y="6" width="16" height="4" rx="2" fill="url(#sg1)" opacity=".8"/>
+            <line x1="24" y1="23" x2="24" y2="36" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+            <rect x="20" y="36" width="12" height="6" rx="3" fill="url(#sg1)"/>
+            <defs>
+              <linearGradient id="sg1" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#0f766e"/><stop offset="1" stop-color="#0ea5e9"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>外壁・屋根塗装</h3>
+        <p>素材と環境に合わせた仕様設計で、建物の美観と耐久性を長期維持。工場・倉庫・住宅など多様な建物に対応します。ハイアルマ等の高耐久塗料を使用した施工実績多数。</p>
+        <div class="tags">
+          <span class="tag">外壁塗装</span>
+          <span class="tag">屋根塗装</span>
+          <span class="tag">金属屋根</span>
+          <span class="tag">スレート</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <!-- Generated SVG: water/waterproofing icon -->
+          <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
+            <path d="M24 6C24 6 10 22 10 31a14 14 0 0028 0C38 22 24 6 24 6z" fill="url(#sg2)"/>
+            <path d="M18 33a6 6 0 006 7" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+            <defs>
+              <linearGradient id="sg2" x1="10" y1="6" x2="38" y2="46" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#0f766e"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>防水施工</h3>
+        <p>雨漏りを根本から防ぐ防水工事。ウレタン防水・シート防水など建物に最適な工法を選定し、確実に施工。漏水診断から施工まで一貫対応します。</p>
+        <div class="tags">
+          <span class="tag">ウレタン防水</span>
+          <span class="tag">シート防水</span>
+          <span class="tag">雨漏り対策</span>
+          <span class="tag">漏水診断</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <!-- Generated SVG: shield/rust prevention icon -->
+          <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
+            <path d="M24 4L8 11v14c0 11 7 19 16 21 9-2 16-10 16-21V11L24 4z" fill="url(#sg3)"/>
+            <path d="M17 24l5 5 10-10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="sg3" x1="8" y1="4" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0f766e"/><stop offset="1" stop-color="#0b1220"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>防錆施工</h3>
+        <p>鋼構造物・橋梁・工場設備の長寿命化に向けた防錆塗装。適切な素地調整から仕上げ塗装まで一貫して対応。JFE建材様など大手企業の施工実績もあります。</p>
+        <div class="tags">
+          <span class="tag">鋼構造物</span>
+          <span class="tag">橋梁</span>
+          <span class="tag">工場設備</span>
+          <span class="tag">長寿命化</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKS ===== -->
+<section class="section section--alt" id="works">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker">Works</div>
+      <h2>施工実績</h2>
+      <p>実際の現場写真でご確認いただけます。JFE建材神戸工場をはじめ、大規模施設の屋根塗装工事も多数対応。</p>
+    </div>
+
+    <div class="works-grid reveal">
+      <div class="work-item">
+        <img src="./images/roof-05-kanryo.jpg" alt="JFE建材神戸工場 屋根塗装 完了" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <h4>JFE建材神戸工場 屋根塗装完了</h4>
+          <span>屋根塗装工事 ／ 兵庫県神戸市</span>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <img src="./images/roof-04-hialma2.jpg" alt="ハイアルマ2回目塗装 施工中" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <h4>ハイアルマ2回目塗装</h4>
+          <span>屋根塗装工事 ／ 施工中</span>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <img src="./images/roof-03-hialma1.jpg" alt="ハイアルマ1回目塗装 施工中" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <h4>ハイアルマ1回目塗装</h4>
+          <span>屋根塗装工事 ／ 施工中</span>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <img src="./images/roof-02-shitanuri.jpg" alt="下塗り施工 施工中" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <h4>下塗り施工</h4>
+          <span>屋根塗装工事 ／ 施工中</span>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <img src="./images/roof-01-keren.jpg" alt="ケレン・高圧洗浄 施工前" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <h4>ケレン・高圧洗浄</h4>
+          <span>屋根塗装工事 ／ 施工前処理</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker">Process</div>
+      <h2>施工の流れ</h2>
+      <p>JFE建材神戸工場 屋根塗装工事の施工ステップ。丁寧な下地処理から仕上げまで、品質を一切妥協しません。</p>
+    </div>
+
+    <div class="process-wrap">
+      <div class="process-line" aria-hidden="true"></div>
+
+      <div class="process-step reveal">
+        <div class="process-num">1</div>
+        <img src="./images/roof-01-keren.jpg" alt="ケレン・清掃・高圧洗浄" loading="lazy">
+        <h4>ケレン・高圧洗浄</h4>
+        <p>サビや旧塗膜を除去し、高圧洗浄で表面を徹底清掃。塗料の密着性を最大化します。</p>
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-num">2</div>
+        <img src="./images/roof-02-shitanuri.jpg" alt="下塗り施工" loading="lazy">
+        <h4>下塗り</h4>
+        <p>プライマーを塗布し、上塗り塗料との密着性を確保。同時に防錆効果も発揮します。</p>
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-num">3</div>
+        <img src="./images/roof-03-hialma1.jpg" alt="中塗り（ハイアルマ1回目）" loading="lazy">
+        <h4>中塗り（1回目）</h4>
+        <p>ハイアルマを使用した中塗り。均一な塗膜厚を確保し耐候性・耐久性を高めます。</p>
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-num">4</div>
+        <img src="./images/roof-04-hialma2.jpg" alt="上塗り（ハイアルマ2回目）" loading="lazy">
+        <h4>上塗り（2回目）</h4>
+        <p>2回目の塗装で十分な塗膜厚を実現。防水・防錆性能と美観を同時に確保します。</p>
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-num">5</div>
+        <img src="./images/roof-05-kanryo.jpg" alt="塗装完了・品質検査" loading="lazy">
+        <h4>完成・品質検査</h4>
+        <p>施工完了後に厳格な品質検査を実施。均一な仕上がりを確認してお引き渡しします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRENGTHS ===== -->
+<section class="section section--dark" id="strengths">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker kicker--light">Why Us</div>
+      <h2>選ばれる理由</h2>
+      <p>品質・安全・誠実を軸に、信頼される仕事を積み重ねてきました。</p>
+    </div>
+
+    <div class="strengths-grid">
+
+      <div class="strength-item reveal">
+        <div class="strength-icon-wrap">
+          <!-- Generated SVG: safety helmet -->
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M5 17c0-6.08 4.92-11 11-11s11 4.92 11 11H5z" fill="#14b8a6"/>
+            <rect x="3" y="17" width="26" height="3.5" rx="1.75" fill="#14b8a6" opacity=".65"/>
+            <rect x="8" y="22" width="16" height="3.5" rx="1.75" fill="#38bdf8" opacity=".55"/>
+            <circle cx="16" cy="10" r="2" fill="white" opacity=".5"/>
+          </svg>
+        </div>
+        <div>
+          <h3>安全管理の徹底</h3>
+          <p>高所作業での安全確保を最優先に、定期的な安全教育と適切な保護具の着用を徹底。無事故の現場づくりに継続して取り組んでいます。</p>
+        </div>
+      </div>
+
+      <div class="strength-item reveal">
+        <div class="strength-icon-wrap">
+          <!-- Generated SVG: award/certificate -->
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="3" width="24" height="20" rx="3.5" fill="#14b8a6" opacity=".8"/>
+            <rect x="8" y="9" width="16" height="2" rx="1" fill="white" opacity=".85"/>
+            <rect x="8" y="13" width="11" height="2" rx="1" fill="white" opacity=".6"/>
+            <circle cx="16" cy="27" r="4.5" fill="#38bdf8"/>
+            <path d="M13.5 27l2 2 4.5-4.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3>30年以上の施工実績</h3>
+          <p>大阪・兵庫エリアで30年以上の実績。工場・倉庫から橋梁まで多様な案件に対応し、大手企業からも高い信頼を得ています。</p>
+        </div>
+      </div>
+
+      <div class="strength-item reveal">
+        <div class="strength-icon-wrap">
+          <!-- Generated SVG: team/people -->
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <circle cx="11" cy="10" r="5" fill="#14b8a6"/>
+            <circle cx="22" cy="10" r="4" fill="#38bdf8" opacity=".8"/>
+            <path d="M2 27c0-5.5 4-9 9-9s9 3.5 9 9" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 18c3.5 0 7.5 2.5 7.5 9" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
+          </svg>
+        </div>
+        <div>
+          <h3>経験豊富な職人チーム</h3>
+          <p>長年の経験を持つ熟練職人が担当。高い技術力と丁寧な仕事ぶりで、お客様から繰り返し選ばれる信頼関係を築いています。</p>
+        </div>
+      </div>
+
+      <div class="strength-item reveal">
+        <div class="strength-icon-wrap">
+          <!-- Generated SVG: clock/schedule -->
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="12" stroke="#14b8a6" stroke-width="2.5"/>
+            <path d="M16 9v7.5l4.5 4.5" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3>工期厳守・丁寧なアフター</h3>
+          <p>綿密な施工計画と進捗管理で工期を徹底遵守。施工後も定期点検・アフターフォローを通じて、建物の状態を長期的に見守ります。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker">FAQ</div>
+      <h2>よくある質問</h2>
+      <p>お客様から多くいただくご質問にお答えします。</p>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span class="faq-badge">Q</span>
+          <span class="faq-q-text">見積もりは無料ですか？</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">はい、現地調査・お見積もりは無料です。まずはお気軽にお問い合わせください。大阪・兵庫エリアであれば現地にお伺いして詳細なご提案をいたします。</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span class="faq-badge">Q</span>
+          <span class="faq-q-text">工場・倉庫などの大規模施設の塗装にも対応していますか？</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">はい、工場・倉庫・物流施設など大規模な施設の塗装工事も多数対応しています。JFE建材様など大手企業の施工実績もございます。高所作業・大面積塗装も安心してお任せください。</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span class="faq-badge">Q</span>
+          <span class="faq-q-text">屋根塗装の塗り替え時期の目安はいつですか？</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">一般的には10〜15年が塗り替えの目安です。ただし屋根材の種類や環境によって異なります。チョーキング（白い粉）が出ている、色褪せが気になるといった症状があれば早めのご相談をおすすめします。無料診断も行っています。</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span class="faq-badge">Q</span>
+          <span class="faq-q-text">対応エリアはどこですか？</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">主に大阪府・兵庫県を対応エリアとしています。神戸市垂水区に本拠を置き、地域密着で活動しています。エリア外のご相談も内容によっては対応可能ですので、まずはお問い合わせください。</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span class="faq-badge">Q</span>
+          <span class="faq-q-text">施工中の騒音や臭いはありますか？</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">ケレン（研磨）工程では一定の音が発生します。塗料の臭いは低臭タイプを使用し最小限に抑えています。近隣への配慮も徹底し、施工前に丁寧にご説明いたします。</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT CTA ===== -->
+<section class="section section--cta" id="contact">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="kicker kicker--light">Contact</div>
+      <h2>お気軽にご相談ください</h2>
+      <p>見積もり・ご相談・お問い合わせはすべて無料です。<br>現地調査からご提案まで、丁寧に対応いたします。</p>
+
+      <div class="cta-actions">
+        <a class="btn btn--primary" href="mailto:hikari07@ares.eonet.ne.jp">
+          <!-- Generated SVG: mail icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          メールで問い合わせる
+        </a>
+        <a class="btn btn--ghost" href="tel:0787825534">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.48 11a19.79 19.79 0 01-3.07-8.67A2 2 0 013.39 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          電話で問い合わせる
+        </a>
+      </div>
+
+      <div class="cta-tel">
+        <p>お電話でのお問い合わせ（平日 8:00〜17:00）</p>
+        <div class="cta-tel-num">078-782-5534</div>
+        <div class="cta-tel-hours">〒655-0051 兵庫県神戸市垂水区舞多聞西5-10-1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">
+          <img class="footer__logo" src="./images/logo.png" alt="株式会社光塗装工業所">
+          <span class="footer__brand-name">株式会社光塗装工業所</span>
+        </div>
+        <div class="footer__info">
+          〒655-0051<br>
+          兵庫県神戸市垂水区舞多聞西5-10-1<br>
+          TEL: 078-782-5534<br>
+          Mail: hikari07@ares.eonet.ne.jp
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">サービス</div>
+        <div class="footer__links">
+          <a href="#services">外壁・屋根塗装</a>
+          <a href="#services">防水施工</a>
+          <a href="#services">防錆施工</a>
+          <a href="#services">防災商品の塗装</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">コンテンツ</div>
+        <div class="footer__links">
+          <a href="#works">施工実績</a>
+          <a href="#process">施工の流れ</a>
+          <a href="#strengths">選ばれる理由</a>
+          <a href="#faq">よくある質問</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <small>© <span id="year"></span> 株式会社光塗装工業所 HIKARI PAINTING CO. All Rights Reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating CTA -->
+<a class="float-cta" href="#contact" aria-label="無料見積もり">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.48 11a19.79 19.79 0 01-3.07-8.67A2 2 0 013.39 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  無料見積もり
+</a>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Header scroll shadow
+  window.addEventListener('scroll', () => {
+    document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const drawer  = document.getElementById('drawer');
+  menuBtn.addEventListener('click', () => {
+    const open = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!open));
+    drawer.classList.toggle('is-open');
+  });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menuBtn.setAttribute('aria-expanded', 'false');
+    drawer.classList.remove('is-open');
+  }));
+
+  // Scroll reveal with stagger
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const siblings = [...(entry.target.parentElement?.querySelectorAll('.reveal') ?? [])];
+      const idx = Math.max(siblings.indexOf(entry.target), 0);
+      setTimeout(() => entry.target.classList.add('visible'), idx * 90);
+      revealObs.unobserve(entry.target);
+    });
+  }, { threshold: 0.10 });
+  reveals.forEach(el => revealObs.observe(el));
+
+  // Counter animation
+  const counters = document.querySelectorAll('.counter');
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      const duration = 1800;
+      const fps = 60;
+      const step = target / (duration / (1000 / fps));
+      let current = 0;
+      const tick = () => {
+        current = Math.min(current + step, target);
+        el.textContent = Math.floor(current);
+        if (current < target) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => countObs.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('is-open'));
+      if (!wasOpen) item.classList.add('is-open');
+    });
+  });
+</script>
+</body>
+</html>
