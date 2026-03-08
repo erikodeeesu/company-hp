@@ -9,14 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .works-gallery { margin-top: 1.5rem; }
+    .works-gallery__title { font-size: 0.85rem; font-weight: 700; color: #555; margin-bottom: 0.75rem; }
+    .works-gallery__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+    .works-gallery__grid img { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; display: block; }
+  </style>
 </head>
 <body>
   <header class="header" id="top">
     <div class="container header__inner">
-    <a class="brand" href="./" aria-label="Home">
-      <img class="brand__logo" src="./asset/logo.png" alt="株式会社光塗装工業所" />
-      <span class="brand__name">株式会社光塗装工業所</span>
-    </a>
+      <a class="brand" href="./" aria-label="Home">
+        <img class="brand__logo" src="./asset/logo.png" alt="株式会社光塗装工業所" />
+        <span class="brand__name">株式会社光塗装工業所</span>
+      </a>
 
       <nav class="nav" aria-label="Primary">
         <a href="./company.html">会社概要</a>
@@ -64,6 +70,16 @@
             <div class="work__meta">建物</div>
             <h3>屋根の塗り替え・壁の塗り替え</h3>
             <p>JFE建材株式会社/神戸工場</p>
+            <div class="works-gallery">
+              <div class="works-gallery__title">施工工程</div>
+              <div class="works-gallery__grid">
+                <img src="./asset/roof-01-keren.jpg" alt="ケレン・清掃・高圧洗浄" loading="lazy" />
+                <img src="./asset/roof-02-shitanuri.jpg" alt="下塗り" loading="lazy" />
+                <img src="./asset/roof-03-hialma1.jpg" alt="ハイアルマ1回目塗装" loading="lazy" />
+                <img src="./asset/roof-04-hialma2.jpg" alt="ハイアルマ2回目塗装" loading="lazy" />
+                <img src="./asset/roof-05-kanryo.jpg" alt="1棟東面 塗装完了" loading="lazy" />
+              </div>
+            </div>
           </div>
         </article>
 
@@ -124,4 +140,3 @@
   <script src="./script.js"></script>
 </body>
 </html>
-
